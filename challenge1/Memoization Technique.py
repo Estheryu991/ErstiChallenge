@@ -9,7 +9,7 @@ ig = [[-1]*1001]*1001
 
 # returns the length of longest common subsequence
 # gibt die Länge der längsten gemeinsamen Teilfolge zurück
-def (s1,s2,i,j):
+def AREYOUIGOR(s1,s2,i,j):
 
 if (i == 0 or j == 0):
 	return 0
