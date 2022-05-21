@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Python syntax and semantics - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"967e02ec-3e3b-453d-95b0-8b97f0e93d5c","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Python_syntax_and_semantics","wgTitle":"Python syntax and semantics","wgCurRevisionId":1082284544,"wgRevisionId":1082284544,"wgArticleId":5250192,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","CS1 maint: url-status","CS1 maint: archived copy as title","Articles with short description","Short description is different from Wikidata","Wikipedia introduction cleanup from January 2021","All pages needing cleanup",
+"Articles covered by WikiProject Wikify from January 2021","All articles covered by WikiProject Wikify","Wikipedia articles with style issues from January 2021","All articles with style issues","All articles lacking reliable references","Articles lacking reliable references from March 2021","Wikipedia articles needing clarification from March 2021","Wikipedia articles needing clarification from April 2015","Articles with example Python (programming language) code","Articles with example C code","Programming language syntax","Python (programming language)"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Python_syntax_and_semantics","wgRelevantArticleId":5250192,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},
+"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":60000,"wgNoticeProject":"wikipedia","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":10,"wgULSCurrentAutonym":"English","wgEditSubmitButtonLabelPublish":true,"wgCentralAuthMobileDomain":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":true,"wgWikibaseItemId":"Q6553861","GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","skins.vector.styles.legacy":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.wikimediaBadges":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements"
+,"site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.uls.compactlinks","ext.uls.interface","ext.growthExperiments.SuggestedEditSession"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1i9g4",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.39.0-wmf.12"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta property="og:title" content="Python syntax and semantics - Wikipedia"/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Python_syntax_and_semantics"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Python_syntax_and_semantics"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Python_syntax_and_semantics rootpage-Python_syntax_and_semantics skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><!-- CentralNotice --></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Python syntax and semantics</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Set of rules defining correctly structured programs</div>
+<table class="box-Lead_too_short plainlinks metadata ambox ambox-content ambox-lead_too_short" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Wiki_letter_w.svg" class="image"><img alt="Wiki letter w.svg" src="//upload.wikimedia.org/wikipedia/en/thumb/6/6c/Wiki_letter_w.svg/40px-Wiki_letter_w.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/6/6c/Wiki_letter_w.svg/60px-Wiki_letter_w.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/6/6c/Wiki_letter_w.svg/80px-Wiki_letter_w.svg.png 2x" data-file-width="44" data-file-height="44" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This article's <a href="/wiki/Wikipedia:Manual_of_Style/Lead_section#Length" title="Wikipedia:Manual of Style/Lead section">lead section</a> <b>may be too short to adequately <a href="/wiki/Wikipedia:Summary_style" title="Wikipedia:Summary style">summarize</a> the key points</b>.<span class="hide-when-compact"> Please consider expanding the lead to <a href="/wiki/Wikipedia:Manual_of_Style/Lead_section#Provide_an_accessible_overview" title="Wikipedia:Manual of Style/Lead section">provide an accessible overview</a> of all important aspects of the article.</span>  <span class="date-container"><i>(<span class="date">January 2021</span>)</i></span></div></td></tr></tbody></table>
+<table class="box-Manual plainlinks metadata ambox ambox-style" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>is written like <a href="/wiki/Wikipedia:What_Wikipedia_is_not#GUIDE" title="Wikipedia:What Wikipedia is not">a manual or guidebook</a>.</b><span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Python_syntax_and_semantics&amp;action=edit">rewrite this article</a> from a descriptive, <a href="/wiki/Wikipedia:Neutral_point_of_view" title="Wikipedia:Neutral point of view">neutral point of view</a>, and remove advice or instruction.</span>  <span class="date-container"><i>(<span class="date">January 2021</span>)</i></span><span class="hide-when-compact"><i> (<small><a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a></small>)</i></span></div></td></tr></tbody></table>
+<p>The <a href="/wiki/Syntax_(programming_languages)" title="Syntax (programming languages)">syntax</a> of the <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python programming language</a> is the set of rules that defines how a Python program will be written and <a href="/wiki/Interpreter_(computing)" title="Interpreter (computing)">interpreted</a> (by both the <a href="/wiki/Runtime_system" title="Runtime system">runtime system</a> and by human readers). The Python language has many similarities to <a href="/wiki/Perl_(programming_language)" class="mw-redirect" title="Perl (programming language)">Perl</a>, <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>, and <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>. However, there are some definite differences between the languages.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Design_philosophy"><span class="tocnumber">1</span> <span class="toctext">Design philosophy</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Keywords"><span class="tocnumber">2</span> <span class="toctext">Keywords</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Indentation"><span class="tocnumber">3</span> <span class="toctext">Indentation</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Data_structures"><span class="tocnumber">4</span> <span class="toctext">Data structures</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Base_types"><span class="tocnumber">4.1</span> <span class="toctext">Base types</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Collection_types"><span class="tocnumber">4.2</span> <span class="toctext">Collection types</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Object_system"><span class="tocnumber">4.3</span> <span class="toctext">Object system</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Literals"><span class="tocnumber">5</span> <span class="toctext">Literals</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Strings"><span class="tocnumber">5.1</span> <span class="toctext">Strings</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Normal_string_literals"><span class="tocnumber">5.1.1</span> <span class="toctext">Normal string literals</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Multi-line_string_literals"><span class="tocnumber">5.1.2</span> <span class="toctext">Multi-line string literals</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Raw_strings"><span class="tocnumber">5.1.3</span> <span class="toctext">Raw strings</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Concatenation_of_adjacent_string_literals"><span class="tocnumber">5.1.4</span> <span class="toctext">Concatenation of adjacent string literals</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Unicode"><span class="tocnumber">5.1.5</span> <span class="toctext">Unicode</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Numbers"><span class="tocnumber">5.2</span> <span class="toctext">Numbers</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Lists,_tuples,_sets,_dictionaries"><span class="tocnumber">5.3</span> <span class="toctext">Lists, tuples, sets, dictionaries</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Operators"><span class="tocnumber">6</span> <span class="toctext">Operators</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Arithmetic"><span class="tocnumber">6.1</span> <span class="toctext">Arithmetic</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Comparison_operators"><span class="tocnumber">6.2</span> <span class="toctext">Comparison operators</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Logical_operators"><span class="tocnumber">6.3</span> <span class="toctext">Logical operators</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Functional_programming"><span class="tocnumber">7</span> <span class="toctext">Functional programming</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#Comprehensions"><span class="tocnumber">7.1</span> <span class="toctext">Comprehensions</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#First-class_functions"><span class="tocnumber">7.2</span> <span class="toctext">First-class functions</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Closures"><span class="tocnumber">7.3</span> <span class="toctext">Closures</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Generators"><span class="tocnumber">7.4</span> <span class="toctext">Generators</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Generator_expressions"><span class="tocnumber">7.5</span> <span class="toctext">Generator expressions</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Dictionary_and_set_comprehensions"><span class="tocnumber">7.6</span> <span class="toctext">Dictionary and set comprehensions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-28"><a href="#Objects"><span class="tocnumber">8</span> <span class="toctext">Objects</span></a>
+<ul>
+<li class="toclevel-2 tocsection-29"><a href="#With_statement"><span class="tocnumber">8.1</span> <span class="toctext">With statement</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Properties"><span class="tocnumber">8.2</span> <span class="toctext">Properties</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Descriptors"><span class="tocnumber">8.3</span> <span class="toctext">Descriptors</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Class_and_static_methods"><span class="tocnumber">8.4</span> <span class="toctext">Class and static methods</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-33"><a href="#Exceptions"><span class="tocnumber">9</span> <span class="toctext">Exceptions</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#Comments_and_docstrings"><span class="tocnumber">10</span> <span class="toctext">Comments and docstrings</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#Function_annotations"><span class="tocnumber">11</span> <span class="toctext">Function annotations</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="#Decorators"><span class="tocnumber">12</span> <span class="toctext">Decorators</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="#Easter_eggs"><span class="tocnumber">13</span> <span class="toctext">Easter eggs</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="#References"><span class="tocnumber">14</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="#External_links"><span class="tocnumber">15</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Design_philosophy">Design philosophy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=1" title="Edit section: Design philosophy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Python was designed to be a highly <a href="/wiki/Readable_code" class="mw-redirect" title="Readable code">readable</a> language.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> It has a relatively uncluttered visual layout and uses English keywords frequently where other languages <a href="/wiki/Syntactic_sugar" title="Syntactic sugar">use punctuation</a>. Python aims to be simple and consistent in the design of its syntax, encapsulated in the mantra "There should be one— and preferably only one —obvious way to do it", from the <a href="/wiki/Zen_of_Python" title="Zen of Python">Zen of Python</a>.<sup id="cite_ref-PEP20_2-0" class="reference"><a href="#cite_note-PEP20-2">&#91;2&#93;</a></sup>
+</p><p>This mantra is deliberately opposed to the <a href="/wiki/Perl" title="Perl">Perl</a> and <a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> mantra, "<a href="/wiki/There%27s_more_than_one_way_to_do_it" title="There&#39;s more than one way to do it">there's more than one way to do it</a>".
+</p>
+<h2><span class="mw-headline" id="Keywords">Keywords</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=2" title="Edit section: Keywords">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Python has 35 <a href="/wiki/Reserved_word" title="Reserved word">keywords</a> or <i>reserved words</i>; they cannot be used as <a href="/wiki/Identifier_(computer_languages)" title="Identifier (computer languages)">identifiers</a>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p>
+<style data-mw-deduplicate="TemplateStyles:r998391716">.mw-parser-output .div-col{margin-top:0.3em;column-width:30em}.mw-parser-output .div-col-small{font-size:90%}.mw-parser-output .div-col-rules{column-rule:1px solid #aaa}.mw-parser-output .div-col dl,.mw-parser-output .div-col ol,.mw-parser-output .div-col ul{margin-top:0}.mw-parser-output .div-col li,.mw-parser-output .div-col dd{page-break-inside:avoid;break-inside:avoid-column}</style><div class="div-col" style="column-width: 12em;">
+<ul><li><code>and</code></li>
+<li><code>as</code></li>
+<li><code>assert</code></li>
+<li><code>async</code><sup id="cite_ref-keywordIn35_6-0" class="reference"><a href="#cite_note-keywordIn35-6">&#91;note 1&#93;</a></sup></li>
+<li><code>await</code><sup id="cite_ref-keywordIn35_6-1" class="reference"><a href="#cite_note-keywordIn35-6">&#91;note 1&#93;</a></sup></li>
+<li><code>break</code></li>
+<li><code>class</code></li>
+<li><code>continue</code></li>
+<li><code>def</code></li>
+<li><code>del</code></li>
+<li><code>elif</code></li>
+<li><code>else</code></li>
+<li><code>except</code></li>
+<li><code>False</code><sup id="cite_ref-becameKeywordIn3_7-0" class="reference"><a href="#cite_note-becameKeywordIn3-7">&#91;note 2&#93;</a></sup></li>
+<li><code>finally</code></li>
+<li><code>for</code></li>
+<li><code>from</code></li>
+<li><code>global</code></li>
+<li><code>if</code></li>
+<li><code>import</code></li>
+<li><code>in</code></li>
+<li><code>is</code></li>
+<li><code>lambda</code></li>
+<li><code>None</code></li>
+<li><code>nonlocal</code><sup id="cite_ref-keywordIn3_8-0" class="reference"><a href="#cite_note-keywordIn3-8">&#91;note 3&#93;</a></sup></li>
+<li><code>not</code></li>
+<li><code>or</code></li>
+<li><code>pass</code></li>
+<li><code>raise</code></li>
+<li><code>return</code></li>
+<li><code>True</code><sup id="cite_ref-becameKeywordIn3_7-1" class="reference"><a href="#cite_note-becameKeywordIn3-7">&#91;note 2&#93;</a></sup></li>
+<li><code>try</code></li>
+<li><code>while</code></li>
+<li><code>with</code></li>
+<li><code>yield</code></li></ul>
+</div>
+<p><br />
+In addition, Python also has 3 <i>soft keywords</i>. Unlike regular <i>hard keywords</i>, soft keywords are reserved words only in the limited contexts where interpreting them as keywords would make syntactic sense. These words can be used as identifiers elsewhere; You can define a function or variable named <i>match</i> or <i>case</i>. <sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;6&#93;</a></sup><sup id="cite_ref-pep-0622_10-0" class="reference"><a href="#cite_note-pep-0622-10">&#91;7&#93;</a></sup>
+</p>
+<ul><li><code>_</code><sup id="cite_ref-keywordIn310_11-0" class="reference"><a href="#cite_note-keywordIn310-11">&#91;note 4&#93;</a></sup></li>
+<li><code>case</code><sup id="cite_ref-keywordIn310_11-1" class="reference"><a href="#cite_note-keywordIn310-11">&#91;note 4&#93;</a></sup></li>
+<li><code>match</code><sup id="cite_ref-keywordIn310_11-2" class="reference"><a href="#cite_note-keywordIn310-11">&#91;note 4&#93;</a></sup></li></ul>
+<dl><dt>Notes</dt></dl>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-keywordIn35-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-keywordIn35_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-keywordIn35_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><code>async</code> and <code>await</code> were introduced in Python 3.5.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup></span>
+</li>
+<li id="cite_note-becameKeywordIn3-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-becameKeywordIn3_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-becameKeywordIn3_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><code>True</code> and <code>False</code> became keywords in Python 3.0. Previously they were <a href="/wiki/Global_variable" title="Global variable">global variables</a>.</span>
+</li>
+<li id="cite_note-keywordIn3-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-keywordIn3_8-0">^</a></b></span> <span class="reference-text"><code>nonlocal</code> was introduced in Python 3.0.</span>
+</li>
+<li id="cite_note-keywordIn310-11"><span class="mw-cite-backlink">^ <a href="#cite_ref-keywordIn310_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-keywordIn310_11-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-keywordIn310_11-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><code>match</code>, <code>case</code> and <code>_</code> were introduced as keywords in Python 3.10.</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Indentation">Indentation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=3" title="Edit section: Indentation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Python uses <a href="/wiki/Whitespace_character" title="Whitespace character">whitespace</a> to delimit <a href="/wiki/Control_flow" title="Control flow">control flow</a> blocks (following the <a href="/wiki/Off-side_rule" title="Off-side rule">off-side rule</a>). Python borrows this feature from its predecessor <a href="/wiki/ABC_(programming_language)" title="ABC (programming language)">ABC</a>: instead of punctuation or keywords, it uses indentation to indicate the run of a <a href="/wiki/Block_(programming)" title="Block (programming)">block</a>.
+</p><p>In so-called "free-format" languages—that use the block structure derived from <a href="/wiki/ALGOL" title="ALGOL">ALGOL</a>—blocks of code are set off with braces (<code>{&#160;}</code>) or keywords. In most <a href="/wiki/Coding_conventions" title="Coding conventions">coding conventions</a> for these languages, programmers <a href="/wiki/Prettyprint#Programming_code_formatting" title="Prettyprint">conventionally indent the code</a> within a block, to visually set it apart from the surrounding code.
+</p><p>A <a href="/wiki/Recursion_(computer_science)" title="Recursion (computer science)">recursive</a> <a href="/wiki/Function_(computer_science)" class="mw-redirect" title="Function (computer science)">function</a> named <code>foo</code>, which is passed a single <a href="/wiki/Parameter_(computer_programming)" title="Parameter (computer programming)">parameter</a>, <code>x</code>, and if the parameter is 0 will call a different function named <code>bar</code> and otherwise will call <code>baz</code>, passing <code>x</code>, and also call itself recursively, passing <code>x-1</code> as the parameter, could be implemented like this in Python:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">bar</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">baz</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">foo</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+<p>and could be written like this in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> with <a href="/wiki/Indent_style#K&amp;R" class="mw-redirect" title="Indent style">K&amp;R indent style</a>:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">bar</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">baz</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">foo</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Incorrectly indented code could be misread by a human reader differently than it would be interpreted by a <a href="/wiki/Compiler" title="Compiler">compiler</a> or interpreter. For example, if the function call <code>foo(x - 1)</code> on the last line in the example above was erroneously indented to be outside the <code>if</code>/<code>else</code> block: 
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">bar</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">baz</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">foo</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+<p>it would cause the last line to always be executed, even when <code>x</code> is 0, resulting in an <a href="/wiki/Infinite_loop#Infinite_recursion" title="Infinite loop">endless recursion</a>.
+</p><p>While both <a href="/wiki/Space_(punctuation)" title="Space (punctuation)">space</a> and <a href="/wiki/Tab_key" title="Tab key">tab</a> characters are accepted as forms of indentation and any multiple of spaces can be used, spaces are recommended<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;8&#93;</a></sup> and 4 spaces (as in the above examples) are recommended and are by far the most commonly used.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;9&#93;</a></sup><sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;10&#93;</a></sup><sup class="noprint Inline-Template" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Reliable_sources" title="Wikipedia:Reliable sources"><span title="The material near this tag may rely on an unreliable source. (March 2021)">unreliable source?</span></a></i>&#93;</sup> Mixing spaces and tabs on consecutive lines is not allowed starting with Python 3<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;11&#93;</a></sup> because that can create bugs which are difficult to see, since many tools do not visually distinguish spaces and tabs.
+</p>
+<h2><span class="mw-headline" id="Data_structures">Data structures</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=4" title="Edit section: Data structures">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1033289096">.mw-parser-output .hatnote{font-style:italic}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output .hatnote i{font-style:normal}.mw-parser-output .hatnote+link+.hatnote{margin-top:-0.5em}</style><div role="note" class="hatnote navigation-not-searchable">See also: <a href="/wiki/Python_(programming_language)#Typing" title="Python (programming language)">Python (programming language) §&#160;Typing</a></div>
+<p>Since Python is a <a href="/wiki/Dynamic_typing" class="mw-redirect" title="Dynamic typing">dynamically typed</a> language, Python <i>values,</i> not variables, carry <a href="/wiki/Data_type" title="Data type">type</a> information. All <a href="/wiki/Variable_(computer_science)" title="Variable (computer science)">variables</a> in Python hold <a href="/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a> to <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">objects</a>, and these references are passed to functions. Some people (including <a href="/wiki/Guido_van_Rossum" title="Guido van Rossum">Guido van Rossum</a> himself) have called this parameter-passing scheme "call by object reference". An object reference means a name, and the passed reference is an "alias", i.e. a copy of the reference to the same object, just as in C/<a href="/wiki/C%2B%2B" title="C++">C++</a>. The object's value may be changed in the called function with the "alias", for example:
+</p>
+<div class="mw-highlight mw-highlight-lang-pycon mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">my_func</span><span class="p">(</span><span class="n">al</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">al</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">al</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_func</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
+<span class="go">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;x&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">alist</span>
+<span class="go">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;x&#39;]</span>
+</pre></div>
+<p>Function <code>my_func</code> changes the value of <code>alist</code> with the formal argument <code>al</code>, which is an alias of <code>alist</code>. However, any attempt to operate (assign a new object reference to) on the alias itself will have no effect on the original object.<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="how do you operate on an alias? the above snippet shows modification to the original object (March 2021)">clarification needed</span></a></i>&#93;</sup> 
+</p>
+<div class="mw-highlight mw-highlight-lang-pycon mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">my_func</span><span class="p">(</span><span class="n">al</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="c1"># al.append(&#39;x&#39;)</span>
+<span class="gp">... </span>    <span class="n">al</span> <span class="o">=</span> <span class="n">al</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="c1"># a new list created and assigned to al means al is no more alias for alist</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">al</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_func</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
+<span class="go">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;x&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">alist</span>
+<span class="go">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</span>
+</pre></div>
+<p>In Python, non-innermost-local and not-declared-global accessible names are all aliases.
+</p><p>Among dynamically typed languages, Python is moderately type-checked. Implicit <a href="/wiki/Type_conversion" title="Type conversion">conversion</a> is defined for <a href="/wiki/Numeric_(data_type)" class="mw-redirect" title="Numeric (data type)">numeric types</a> (as well as <a href="/wiki/Boolean_data_type" title="Boolean data type">booleans</a>), so one may validly multiply a <a href="/wiki/Complex_number" title="Complex number">complex number</a> by an <a href="/wiki/Integer_(computer_science)" title="Integer (computer science)">integer</a> (for instance) without explicit <a href="/wiki/Type_conversion" title="Type conversion">casting</a>. However, there is no implicit conversion between, for example, numbers and <a href="/wiki/String_(computer_science)" title="String (computer science)">strings</a>; a string is an invalid argument to a mathematical function expecting a number.
+</p>
+<h3><span class="mw-headline" id="Base_types">Base types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=5" title="Edit section: Base types">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Python has a broad range of basic data types. Alongside conventional integer and <a href="/wiki/Floating-point" class="mw-redirect" title="Floating-point">floating-point</a> arithmetic, it transparently supports <a href="/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">arbitrary-precision arithmetic</a>, <a href="/wiki/Complex_number" title="Complex number">complex numbers</a>, and <a href="/wiki/Decimal_data_type" title="Decimal data type">decimal numbers</a>.
+</p><p>Python supports a wide variety of string operations. Strings in Python are <a href="/wiki/Immutable_object" title="Immutable object">immutable</a>, so a string operation such as a substitution of <a href="/wiki/Character_(computing)" title="Character (computing)">characters</a>, that in other programming languages might alter the string <a href="/wiki/In-place_algorithm" title="In-place algorithm">in place</a>, returns a new string in Python. Performance considerations sometimes push for using special techniques in programs that modify strings intensively, such as joining character arrays into strings only as needed.
+</p>
+<h3><span class="mw-headline" id="Collection_types">Collection types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=6" title="Edit section: Collection types">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>One of the very useful aspects of Python is the concept of <a href="/wiki/Collection_(abstract_data_type)" title="Collection (abstract data type)"><i>collection</i></a> (or <i>container</i>) types. In general a collection is an object that contains other objects in a way that is easily referenced or <i>indexed</i>. Collections come in two basic forms: <i>sequences</i> and <i>mappings</i>.
+</p><p>The ordered sequential types are lists (dynamic <a href="/wiki/Array_data_type" title="Array data type">arrays</a>), <a href="/wiki/Tuple" title="Tuple">tuples</a>, and strings. All sequences are indexed positionally (<a href="/wiki/Zero-based_numbering" title="Zero-based numbering">0 through <i>length</i> − 1</a>) and all but strings can contain any type of object, including multiple types in the same sequence. Both strings and tuples are immutable, making them perfect candidates for dictionary keys (see below). Lists, on the other hand, are mutable; elements can be inserted, deleted, modified, appended, or sorted <a href="/wiki/In-place_algorithm" title="In-place algorithm">in-place</a>.
+</p><p>Mappings, on the other hand, are (often unordered) types implemented in the form of <i>dictionaries</i> which "map" a set of immutable keys to corresponding elements (much like a mathematical function).  For example, one could define a dictionary having a string <code>"toast"</code> mapped to the integer <code>42</code> or vice versa. The keys in a dictionary must be of an immutable Python type, such as an integer or a string, because under the hood they are implemented via a <a href="/wiki/Hash_function" title="Hash function">hash function</a>. This makes for much faster lookup times, but requires keys not change.
+</p><p>Dictionaries are central to the internals of Python as they reside at the core of all objects and classes: the mappings between variable names (strings) and the values which the names reference are stored as dictionaries (see <a href="/wiki/Python_syntax_and_semantics#Object_system" title="Python syntax and semantics">Object system</a>). Since these dictionaries are directly accessible (via an object's <code>__dict__</code> attribute), <a href="/wiki/Metaprogramming" title="Metaprogramming">metaprogramming</a> is a straightforward and natural process in Python.
+</p><p>A <a href="/wiki/Set_(computer_science)" class="mw-redirect" title="Set (computer science)">set</a> collection type is an unindexed, unordered collection that contains no duplicates, and implements <a href="/wiki/Naive_set_theory" title="Naive set theory">set theoretic</a> operations such as <a href="/wiki/Union_(set_theory)" title="Union (set theory)">union</a>, <a href="/wiki/Intersection_(set_theory)" title="Intersection (set theory)">intersection</a>, <a href="/wiki/Relative_complement" class="mw-redirect" title="Relative complement">difference</a>, <a href="/wiki/Symmetric_difference" title="Symmetric difference">symmetric difference</a>, and <a href="/wiki/Subset" title="Subset">subset</a> testing. There are two types of sets: <code>set</code> and <code>frozenset</code>, the only difference being that <code>set</code> is mutable and <code>frozenset</code> is immutable. Elements in a set must be hashable. Thus, for example, a <code>frozenset</code> can be an element of a regular <code>set</code> whereas the opposite is not true.
+</p><p>Python also provides extensive collection manipulating abilities such as built in containment checking and a generic iteration protocol.
+</p>
+<h3><span class="mw-headline" id="Object_system">Object system</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=7" title="Edit section: Object system">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In Python, everything is an object, even classes. Classes, as objects, have a class, which is known as their <a href="/wiki/Metaclass" title="Metaclass">metaclass</a>. Python also supports <a href="/wiki/Multiple_inheritance" title="Multiple inheritance">multiple inheritance</a> and <a href="/wiki/Mixin" title="Mixin">mixins</a>.
+</p><p>The language supports extensive <a href="/wiki/Introspection_(computer_science)" class="mw-redirect" title="Introspection (computer science)">introspection</a> of types and classes. Types can be read and compared—types are instances of <code>type</code>.  The attributes of an object can be extracted as a dictionary.
+</p><p>Operators can be <a href="/wiki/Operator_overloading" title="Operator overloading">overloaded</a> in Python by defining special member functions - for instance, defining a method named <code>__add__</code> on a class permits one to use the <code>+</code> operator on objects of that class.
+</p>
+<h2><span class="mw-headline" id="Literals">Literals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=8" title="Edit section: Literals">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Strings">Strings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=9" title="Edit section: Strings">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Python has various kinds of <a href="/wiki/String_literal" title="String literal">string literals</a>.
+</p>
+<h4><span class="mw-headline" id="Normal_string_literals">Normal string literals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=10" title="Edit section: Normal string literals">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Either single or double quotes can be used to quote strings. Unlike in Unix shell languages, <a href="/wiki/Perl" title="Perl">Perl</a> or Perl-influenced languages such as <a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> or <a href="/wiki/Groovy_(programming_language)" class="mw-redirect" title="Groovy (programming language)">Groovy</a>, single quotes and double quotes function identically, i.e. there is no string interpolation of <i>$foo</i> expressions. However, interpolation can be done in various ways: with "f-strings" (since Python 3.6<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;12&#93;</a></sup>), using the <code>format</code> method or the old <i>%</i> string-format operator.
+</p><p>
+For instance, all of these Python statements:</p><div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I just printed </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> pages to the printer </span><span class="si">{</span><span class="n">printer</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I just printed </span><span class="si">{}</span><span class="s2"> pages to the printer </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">printer</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I just printed </span><span class="si">{0}</span><span class="s2"> pages to the printer </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">printer</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I just printed </span><span class="si">{num}</span><span class="s2"> pages to the printer </span><span class="si">{printer}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="n">num</span><span class="p">,</span> <span class="n">printer</span><span class="o">=</span><span class="n">printer</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I just printed </span><span class="si">%s</span><span class="s2"> pages to the printer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">printer</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I just printed </span><span class="si">%(num)s</span><span class="s2"> pages to the printer </span><span class="si">%(printer)s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;num&quot;</span><span class="p">:</span> <span class="n">num</span><span class="p">,</span> <span class="s2">&quot;printer&quot;</span><span class="p">:</span> <span class="n">printer</span><span class="p">})</span>
+</pre></div><p>are equivalent to the Perl statement:</p><div class="mw-highlight mw-highlight-lang-perl mw-content-ltr" dir="ltr"><pre><span></span><span class="k">print</span> <span class="s">&quot;I just printed $num pages to the printer $printer\n&quot;</span>
+</pre></div><p>They build a string using the variables <code>num</code> and <code>printer</code>.
+</p><h4><span class="mw-headline" id="Multi-line_string_literals">Multi-line string literals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=11" title="Edit section: Multi-line string literals">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>There are also multi-line strings, which begin and end with a series of three single or double quotes and function like <a href="/wiki/Here_document" title="Here document">here documents</a> in <a href="/wiki/Perl" title="Perl">Perl</a> and <a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>.
+</p><p>A simple example with <a href="/wiki/String_interpolation" title="String interpolation">variable interpolation</a> (using the <code>format</code> method) is:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;Dear </span><span class="si">{recipient}</span><span class="s2">,</span>
+
+<span class="s2">I wish you to leave Sunnydale and never return.</span>
+
+<span class="s2">Not Quite Love,</span>
+<span class="si">{sender}</span><span class="s2"></span>
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sender</span><span class="o">=</span><span class="s2">&quot;Buffy the Vampire Slayer&quot;</span><span class="p">,</span> <span class="n">recipient</span><span class="o">=</span><span class="s2">&quot;Spike&quot;</span><span class="p">))</span>
+</pre></div>
+<h4><span class="mw-headline" id="Raw_strings">Raw strings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=12" title="Edit section: Raw strings">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Finally, all of the previously mentioned string types come in "<a href="/wiki/Raw_string" class="mw-redirect" title="Raw string">raw</a>" varieties (denoted by placing a literal <i>r</i> before the opening quote), which do no backslash-interpolation and hence are very useful for <a href="/wiki/Regular_expression" title="Regular expression">regular expressions</a>; compare <a href="/wiki/C_Sharp_syntax#Literals" title="C Sharp syntax">"@-quoting"</a> in <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>. Raw strings were originally included specifically for regular expressions. Due to limitations of the tokenizer, raw strings may not have a trailing backslash.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;13&#93;</a></sup> Creating a raw string holding a <a href="/wiki/Windows" class="mw-redirect" title="Windows">Windows</a> path ending with a backslash requires some variety of workaround (commonly, using forward slashes instead of backslashes, since Windows accepts both).
+</p><p>Examples include:
+</p>
+<div class="mw-highlight mw-highlight-lang-pycon mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># A Windows path, even raw strings cannot end in a backslash</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="sa">r</span><span class="s2">&quot;C:\Foo\Bar\Baz</span><span class="se">\&quot;</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>
+    <span class="sa">r</span><span class="s2">&quot;C:\Foo\Bar\Baz</span><span class="se">\&quot;</span>
+                     <span class="p p-Marker">^</span>
+<span class="gr">SyntaxError</span>: <span class="n">EOL while scanning string literal</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dos_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Foo\Bar\Baz\ &quot;</span> <span class="c1"># avoids the error by adding</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dos_path</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>              <span class="c1"># and removing trailing space</span>
+<span class="go">&#39;C:\\Foo\\Bar\\Baz\\&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">quoted_dos_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;&quot;</span><span class="si">{}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dos_path</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">quoted_dos_path</span>
+<span class="go">&#39;&quot;C:\\Foo\\Bar\\Baz\\ &quot;&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># A regular expression matching a quoted string with possible backslash quoting</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&quot;(([^&quot;</span><span class="se">\\</span><span class="s1">]|</span><span class="se">\\</span><span class="s1">.)*)&quot;&#39;</span><span class="p">,</span> <span class="n">quoted_dos_path</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<span class="go">&#39;C:\\Foo\\Bar\\Baz\\&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code</span> <span class="o">=</span> <span class="s1">&#39;foo(2, bar)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Reverse the arguments in a two-arg function call</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\(([^,]*?),([^ ,]*?)\)&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;(\2, \1)&#39;</span><span class="p">,</span> <span class="n">code</span><span class="p">)</span>
+<span class="go">&#39;foo(2, bar)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Note that this won&#39;t work if either argument has parens or commas in it.</span>
+</pre></div>
+<h4><span class="mw-headline" id="Concatenation_of_adjacent_string_literals">Concatenation of adjacent string literals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=13" title="Edit section: Concatenation of adjacent string literals">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>String literals (using possibly different quote conventions) appearing contiguously and only separated by whitespace (including new lines), are allowed and are aggregated into a single longer string.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;14&#93;</a></sup>
+Thus
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;One Good Turn: &quot;</span> \
+        <span class="s1">&#39;A Natural History of the Screwdriver and the Screw&#39;</span>
+</pre></div>
+<p>is equivalent to
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;One Good Turn: A Natural History of the Screwdriver and the Screw&quot;</span>
+</pre></div>
+<h4><span class="mw-headline" id="Unicode">Unicode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=14" title="Edit section: Unicode">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Since Python 3.0, the default character set is <a href="/wiki/UTF-8" title="UTF-8">UTF-8</a> both for source code and the interpreter. In UTF-8, unicode strings are handled like traditional byte strings. This example will work:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Γειά&quot;</span> <span class="c1"># Hello in Greek</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Numbers">Numbers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=15" title="Edit section: Numbers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Numeric literals in Python are of the normal sort, e.g. <code>0</code>, <code>-1</code>, <code>3.4</code>, <code>3.5e-8</code>.
+</p><p>Python has arbitrary-length integers and automatically increases their storage size as necessary. Prior to Python 3, there were two kinds of integral numbers: traditional fixed size integers and "long" integers of arbitrary size. The conversion to "long" integers was performed automatically when required, and thus the programmer usually didn't have to be aware of the two integral types. In newer language versions the distinction is completely gone and all integers behave like arbitrary-length integers.
+</p><p>Python supports normal <a href="/wiki/IEEE_754-2008" class="mw-redirect" title="IEEE 754-2008">floating point</a> numbers, which are created when a dot is used in a literal (e.g. <code>1.1</code>), when an integer and a floating point number are used in an expression, or as a result of some mathematical operations ("true division" via the <code>/</code> operator, or exponentiation with a negative exponent).
+</p><p>Python also supports <a href="/wiki/Complex_number" title="Complex number">complex numbers</a> natively.  Complex numbers are indicated with the <code>J</code> or <code>j</code> suffix, e.g. <code>3 + 4j</code>.
+</p>
+<h3><span id="Lists.2C_tuples.2C_sets.2C_dictionaries"></span><span class="mw-headline" id="Lists,_tuples,_sets,_dictionaries">Lists, tuples, sets, dictionaries</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=16" title="Edit section: Lists, tuples, sets, dictionaries">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Python has syntactic support for the creation of container types.
+</p><p>Lists (class <code>list</code>) are mutable sequences of items of arbitrary types, and can be created either with the special syntax
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a dog&quot;</span><span class="p">]</span>
+</pre></div>
+<p>or using normal object creation
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">a_second_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">a_second_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a_second_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+<p>Tuples (class <code>tuple</code>) are immutable sequences of items of arbitrary types. There is also a special syntax to create tuples
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">a_tuple</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;four&quot;</span>
+<span class="n">a_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;four&quot;</span><span class="p">)</span>
+</pre></div><p>Although tuples are created by separating items with commas, the whole construct is usually wrapped in parentheses to increase readability. An empty tuple is denoted by <code>()</code>, while a tuple with a single value can be created with <code>(1,)</code>.
+</p><p>Sets (class <code>set</code>) are mutable containers of hashable items<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;15&#93;</a></sup> of arbitrary types, with no duplicates. The items are not ordered, but sets support iteration over the items. The syntax for set creation uses curly brackets
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">some_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="p">(),</span> <span class="kc">False</span><span class="p">}</span>
+</pre></div>
+<p>Python sets are very much like <a href="/wiki/Set_(mathematics)" title="Set (mathematics)">mathematical sets</a>, and support operations like set <a href="/wiki/Set_(mathematics)#Intersections" title="Set (mathematics)">intersection</a> and <a href="/wiki/Set_(mathematics)#Unions" title="Set (mathematics)">union</a>. Python also features a <code>frozenset</code> class for immutable sets, see <a href="/wiki/Python_syntax_and_semantics#Collection_types" title="Python syntax and semantics">Collection types</a>.
+</p><p>Dictionaries (class <code>dict</code>) are mutable mappings tying keys and corresponding values. Python has special syntax to create dictionaries (<code>{key: value}</code>)
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">a_dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;key 1&quot;</span><span class="p">:</span> <span class="s2">&quot;value 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="p">[]}</span>
+</pre></div>
+<p>The dictionary syntax is similar to the set syntax, the difference is the presence of colons. The empty literal <code>{}</code> results in an empty dictionary rather than an empty set, which is instead created using the non-literal constructor: <code>set()</code>.
+</p>
+<h2><span class="mw-headline" id="Operators">Operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=17" title="Edit section: Operators">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Arithmetic">Arithmetic</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=18" title="Edit section: Arithmetic">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Python includes the <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> ("true division"), <code>//</code> (<a href="/wiki/Floor_and_ceiling_functions" title="Floor and ceiling functions">floor</a> division), <code>%</code> (<a href="/wiki/Modulo_operator" class="mw-redirect" title="Modulo operator">modulus</a>), and <code>**</code> (<a href="/wiki/Exponentiation" title="Exponentiation">exponentiation</a>) operators, with their usual <a href="/wiki/Order_of_operations" title="Order of operations">mathematical precedence</a>.
+</p><p>In Python 3, <code>x / y</code> performs "true division", meaning that it always returns a float, even if both <code>x</code> and <code>y</code> are integers that divide evenly.
+</p>
+<div class="mw-highlight mw-highlight-lang-pycon mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="go">2.0</span>
+</pre></div>
+<p>and <code>//</code> performs <a href="/wiki/Integer_division" class="mw-redirect" title="Integer division">integer division</a> or <i>floor division</i>, returning the floor of the quotient as an integer.
+</p><p>In Python 2 (and most other programming languages), unless explicitly requested, <code>x / y</code> performed <a href="/wiki/Integer_division" class="mw-redirect" title="Integer division">integer division</a>, returning a float only if either input was a float. However, because Python is a dynamically typed language, it was not always possible to tell which operation was being performed, which often led to subtle bugs, thus prompting the introduction of the <code>//</code> operator and the change in semantics of the <code>/</code> operator in Python 3.
+</p>
+<h3><span class="mw-headline" id="Comparison_operators">Comparison operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=19" title="Edit section: Comparison operators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The comparison operators, i.e. <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>is</code>, <code>is not</code>, <code>in</code> and <code>not in</code><sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;16&#93;</a></sup> are used on all manner of values. Numbers, strings, sequences, and mappings can all be compared. In Python 3, disparate types (such as a <code>str</code> and an <code>int</code>) do not have a consistent relative ordering. While it was possible to compare whether some string was greater-than or less-than some integer in Python 2, this was considered a historical design quirk and was ultimately removed in Python 3.
+</p><p>Chained comparison expressions such as <code>a &lt; b &lt; c</code> have roughly the meaning that they have in mathematics, rather than the unusual meaning found in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and similar languages. The terms are evaluated and compared in order. The operation has <a href="/wiki/Short-circuit_evaluation" title="Short-circuit evaluation">short-circuit semantics</a>, meaning that evaluation is guaranteed to stop as soon as a verdict is clear: if <code>a &lt; b</code> is false, <code>c</code> is never evaluated as the expression cannot possibly be true anymore.
+</p><p>For expressions without side effects, <code>a &lt; b &lt; c</code> is equivalent to <code>a &lt; b and b &lt; c</code>. However, there is a substantial difference when the expressions have side effects. <code>a &lt; f(x) &lt; b</code> will evaluate <code>f(x)</code> exactly once, whereas <code>a &lt; f(x) and f(x) &lt; b</code> will evaluate it twice if the value of <code>a</code> is less than <code>f(x)</code> and once otherwise.
+</p>
+<h3><span class="mw-headline" id="Logical_operators">Logical operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=20" title="Edit section: Logical operators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In all versions of Python, boolean operators treat zero values or empty values such as <code>""</code>, <code>0</code>, <code>None</code>, <code>0.0</code>, <code>[]</code>, and <code>{}</code> as false, while in general treating non-empty, non-zero values as true. The boolean values <code>True</code> and <code>False</code> were added to the language in Python 2.2.1 as constants (subclassed from <code>1</code> and <code>0</code>) and were changed to be full blown keywords in Python 3. The binary comparison operators such as <code>==</code> and <code>&gt;</code> return either <code>True</code> or <code>False</code>.
+</p><p>The boolean operators <code>and</code> and <code>or</code> use <a href="/wiki/Minimal_evaluation" class="mw-redirect" title="Minimal evaluation">minimal evaluation</a>. For example, <code>y == 0 or x/y &gt; 100</code> will never raise a divide-by-zero exception. These operators return the value of the last operand evaluated, rather than <code>True</code> or <code>False</code>. Thus the expression <code>(4 and 5)</code> evaluates to <code>5</code>, and <code>(4 or 5)</code> evaluates to <code>4</code>.
+</p>
+<h2><span class="mw-headline" id="Functional_programming">Functional programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=21" title="Edit section: Functional programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As mentioned above, another strength of Python is the availability of a <a href="/wiki/Functional_programming" title="Functional programming">functional programming</a> style. As may be expected, this makes working with lists and other collections much more straightforward.
+</p>
+<h3><span class="mw-headline" id="Comprehensions">Comprehensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=22" title="Edit section: Comprehensions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1033289096"/><div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/List_comprehension" title="List comprehension">List comprehension</a></div>
+<p>One such construction is the <a href="/wiki/List_comprehension" title="List comprehension">list comprehension</a>, which can be expressed with the following format:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="n">mapping_expression</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">source_list</span> <span class="k">if</span> <span class="n">filter_expression</span><span class="p">]</span>
+</pre></div>
+<p>Using list comprehension to calculate the first five powers of two:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">powers_of_two</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">**</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
+</pre></div>
+<p>The <a href="/wiki/Quicksort" title="Quicksort">Quicksort</a> algorithm can be expressed elegantly (albeit inefficiently) using list comprehensions:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">qsort</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">L</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="n">pivot</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">qsort</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="p">])</span> <span class="o">+</span>
+            <span class="p">[</span><span class="n">pivot</span><span class="p">]</span> <span class="o">+</span>
+            <span class="n">qsort</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">pivot</span><span class="p">]))</span>
+</pre></div>
+<p>Python 2.7+<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;17&#93;</a></sup> also supports set comprehensions<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;18&#93;</a></sup> and dictionary comprehensions.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;19&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="First-class_functions">First-class functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=23" title="Edit section: First-class functions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In Python, functions are <a href="/wiki/First-class_function" title="First-class function">first-class</a> objects that can be created and passed around dynamically.
+</p><p>Python's limited support for <a href="/wiki/Anonymous_function" title="Anonymous function">anonymous functions</a> is the <code>lambda</code> construct. An example is the anonymous function which squares its input, called with the argument of 5:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+<p>Lambdas are limited to containing an <a href="/wiki/Expression_(programming)" class="mw-redirect" title="Expression (programming)">expression</a> rather than <a href="/wiki/Statement_(programming)" class="mw-redirect" title="Statement (programming)">statements</a>, although control flow can still be implemented less elegantly within lambda by using short-circuiting,<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;20&#93;</a></sup> and more idiomatically with conditional expressions.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;21&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Closures">Closures</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=24" title="Edit section: Closures">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Python has had support for <a href="/wiki/Closure_(computer_science)" class="mw-redirect" title="Closure (computer science)">lexical closures</a> since version 2.2. Here's an example function that returns a function that <a href="/wiki/Finite_difference" title="Finite difference">approximates the derivative</a> of the given function:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">derivative</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dx</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a function that approximates the derivative of f</span>
+<span class="sd">    using an interval of dx, which should be appropriately small.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">dx</span>
+    <span class="k">return</span> <span class="n">function</span>
+</pre></div>
+<p>Python's syntax, though, sometimes leads programmers of other languages to think that closures are not supported. <a href="/wiki/Scope_(computer_science)" title="Scope (computer science)">Variable scope</a> in Python is implicitly determined by the scope in which one assigns a value to the variable, unless scope is explicitly declared with <code>global</code> or <code>nonlocal</code>.<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;22&#93;</a></sup>
+</p><p>Note that the closure's binding of a name to some value is not mutable from within the function. Given:
+</p>
+<div class="mw-highlight mw-highlight-lang-pycon mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;a: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;b: </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">b</span> <span class="o">=</span> <span class="n">c</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;b*: </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">bar</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;b: </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">a: 1</span>
+<span class="go">b: 2</span>
+<span class="go">b*: 1</span>
+<span class="go">b: 2</span>
+</pre></div>
+<p>and you can see that <code>b</code>, as visible from the closure's scope, retains the value it had; the changed binding of <code>b</code> inside the inner function did not propagate out.  The way around this is to use a <code>nonlocal b</code> statement in <code>bar</code>. In Python 2 (which lacks <code>nonlocal</code>), the usual workaround is to use a mutable value and change that value, not the binding.  E.g., a list with one element.
+</p>
+<h3><span class="mw-headline" id="Generators">Generators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=25" title="Edit section: Generators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Introduced in Python 2.2 as an optional feature and finalized in version 2.3, <a href="/wiki/Generator_(computer_science)" class="mw-redirect" title="Generator (computer science)">generators</a> are Python's mechanism for <a href="/wiki/Lazy_evaluation" title="Lazy evaluation">lazy evaluation</a> of a function that would otherwise return a space-prohibitive or computationally intensive list.
+</p><p>This is an example to lazily generate the prime numbers:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">count</span>
+
+<span class="k">def</span> <span class="nf">generate_primes</span><span class="p">(</span><span class="n">stop_at</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">count</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">stop_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">stop_at</span><span class="p">:</span>
+            <span class="k">return</span> <span class="c1"># raises the StopIteration exception</span>
+        <span class="n">composite</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span> <span class="o">%</span> <span class="n">p</span><span class="p">:</span>
+                <span class="n">composite</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">break</span>
+            <span class="k">elif</span> <span class="n">p</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">composite</span><span class="p">:</span>
+            <span class="n">primes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">n</span>
+</pre></div>
+<p>When calling this function, the returned value can be iterated over much like a list:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">generate_primes</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>  <span class="c1"># iterate over the primes between 0 and 100</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">generate_primes</span><span class="p">():</span>  <span class="c1"># iterate over ALL primes indefinitely</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+<p>The definition of a generator appears identical to that of a function, except the keyword <code>yield</code> is used in place of <code>return</code>. However, a generator is an object with persistent state, which can repeatedly enter and leave the same scope. A generator call can then be used in place of a list, or other structure whose elements will be iterated over. Whenever the <code>for</code> loop in the example requires the next item, the generator is called, and yields the next item.
+</p><p>Generators don't have to be infinite like the prime-number example above. When a generator terminates, an internal exception is raised which indicates to any calling context that there are no more values. A <code>for</code> loop or other iteration will then terminate.
+</p>
+<h3><span class="mw-headline" id="Generator_expressions">Generator expressions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=26" title="Edit section: Generator expressions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1033289096"/><div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/List_comprehension" title="List comprehension">List comprehension</a></div>
+<p>Introduced in Python 2.4, generator expressions are the <a href="/wiki/Lazy_evaluation" title="Lazy evaluation">lazy evaluation</a> equivalent of list comprehensions.  Using the prime number generator provided in the above section, we might define a lazy, but not quite infinite collection.
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">islice</span>
+
+<span class="n">primes_under_million</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">generate_primes</span><span class="p">()</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1000000</span><span class="p">)</span>
+<span class="n">two_thousandth_prime</span> <span class="o">=</span> <span class="n">islice</span><span class="p">(</span><span class="n">primes_under_million</span><span class="p">,</span> <span class="mi">1999</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+</pre></div>
+<p>Most of the memory and time needed to generate this many primes will not be used until the needed element is actually accessed.  Unfortunately, you cannot perform simple indexing and slicing of generators, but must use the <i>itertools</i> module or "roll your own" loops.  In contrast, a list comprehension is functionally equivalent, but is <i>greedy</i> in performing all the work:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">primes_under_million</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">generate_primes</span><span class="p">(</span><span class="mi">2000000</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1000000</span><span class="p">]</span>
+<span class="n">two_thousandth_prime</span> <span class="o">=</span> <span class="n">primes_under_million</span><span class="p">[</span><span class="mi">1999</span><span class="p">]</span>
+</pre></div>
+<p>The list comprehension will immediately create a large list (with 78498 items, in the example, but transiently creating a list of primes under two million), even if most elements are never accessed.  The generator comprehension is more parsimonious.
+</p>
+<h3><span class="mw-headline" id="Dictionary_and_set_comprehensions">Dictionary and set comprehensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=27" title="Edit section: Dictionary and set comprehensions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>While lists and generators had comprehensions/expressions, in Python versions older than 2.7 the other Python built-in collection types (dicts and sets) had to be kludged in using lists or generators:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dict</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">16</span><span class="p">}</span>
+</pre></div>
+<p>Python 2.7 and 3.0 unified all collection types by introducing dictionary and set comprehensions, similar to list comprehensions:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>  <span class="c1"># regular list comprehension</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)}</span>  <span class="c1"># set comprehension</span>
+<span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)}</span>  <span class="c1"># dict comprehension</span>
+<span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">16</span><span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Objects">Objects</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=28" title="Edit section: Objects">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Python supports most object oriented programming (OOP) techniques. It allows <a href="/wiki/Polymorphism_(computer_science)" title="Polymorphism (computer science)">polymorphism</a>, not only within a <a href="/wiki/Class_hierarchy" title="Class hierarchy">class hierarchy</a> but also by <a href="/wiki/Duck_typing" title="Duck typing">duck typing</a>. Any object can be used for any type, and it will work so long as it has the proper methods and attributes. And everything in Python is an object, including classes, functions, numbers and modules. Python also has support for <a href="/wiki/Metaclass" title="Metaclass">metaclasses</a>, an advanced tool for enhancing classes' functionality. Naturally, <a href="/wiki/Inheritance_(computer_science)" class="mw-redirect" title="Inheritance (computer science)">inheritance</a>, including <a href="/wiki/Multiple_inheritance" title="Multiple inheritance">multiple inheritance</a>, is supported. Python has very limited support for private variables using <a href="/wiki/Name_mangling#Python" title="Name mangling">name mangling</a> which is rarely used in practice as <a href="/wiki/Information_hiding" title="Information hiding">information hiding</a> is seen by some as <a href="/wiki/Python_(programming_language)#Design_philosophy_and_features" title="Python (programming language)">unpythonic</a>, in that it suggests that the class in question contains unaesthetic or ill-planned internals. The slogan "we're all responsible users here" is used to describe this attitude.<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;23&#93;</a></sup>
+</p>
+<style data-mw-deduplicate="TemplateStyles:r996844942">.mw-parser-output .templatequote{overflow:hidden;margin:1em 0;padding:0 40px}.mw-parser-output .templatequote .templatequotecite{line-height:1.5em;text-align:left;padding-left:1.6em;margin-top:0}</style><blockquote class="templatequote"><p>As is true for modules, classes in Python do not put an absolute barrier between definition and user, but rather rely on the politeness of the user not to "break into the definition."</p><div class="templatequotecite">—&#8201;<cite><a rel="nofollow" class="external text" href="https://docs.python.org/2.6/tutorial/classes.html">9. Classes</a>, <i>The Python 2.6 Tutorial</i> (2013)</cite></div></blockquote>
+<p><abbr title="Object Oriented Programming">OOP</abbr> doctrines such as the use of accessor methods to read data members are not enforced in Python. Just as Python offers functional-programming constructs but does not attempt to demand <a href="/wiki/Referential_transparency" title="Referential transparency">referential transparency</a>, it offers an object system but does not demand <abbr title="Object Oriented Programming">OOP</abbr> behavior. Moreover, it is always possible to redefine the class using <i>properties</i> (see <a href="/wiki/Python_syntax_and_semantics#Properties" title="Python syntax and semantics">Properties</a>) so that when a certain variable is set or retrieved in calling code, it really invokes a function call, so that <code>spam.eggs = toast</code> might really invoke <code>spam.set_eggs(toast)</code>. This nullifies the practical advantage of accessor functions, and it remains <abbr title="Object Oriented Programming">OOP</abbr> because the property <code>eggs</code> becomes a legitimate part of the object's interface: it need not reflect an implementation detail.
+</p><p>In version 2.2 of Python, "new-style" classes were introduced. With new-style classes, objects and types were unified, allowing the subclassing of types.
+Even entirely new types can be defined, complete with custom behavior for infix operators. This allows for many radical things to be done syntactically within Python. A new <a rel="nofollow" class="external text" href="https://www.python.org/download/releases/2.3/mro/">method resolution order</a> for multiple inheritance was also adopted with Python 2.3.  It is also possible to run custom code while accessing or setting attributes, though the details of those techniques have evolved between Python versions.
+</p>
+<h3><span class="mw-headline" id="With_statement">With statement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=29" title="Edit section: With statement">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <code>with</code> statement handles resources, and allows users to work with the Context Manager protocol.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;24&#93;</a></sup> One function (<code>__enter__()</code>) is called when entering scope and another (<code>__exit__()</code>) when leaving. This prevents forgetting to free the resource and also handles more complicated situations such as freeing the resource when an exception occurs while it is in use. Context Managers are often used with files, database connections, test cases, etc.
+</p>
+<h3><span class="mw-headline" id="Properties">Properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=30" title="Edit section: Properties">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Properties allow specially defined methods to be invoked on an object instance by using the same syntax as used for attribute access.  An example of a class defining some properties is:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_a</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_a</span>
+
+    <span class="nd">@a</span><span class="o">.</span><span class="n">setter</span>  <span class="c1"># makes the property writable</span>
+    <span class="k">def</span> <span class="nf">a</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_a</span> <span class="o">=</span> <span class="n">value</span>
+</pre></div>
+<h3><span class="mw-headline" id="Descriptors">Descriptors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=31" title="Edit section: Descriptors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A class that defines one or more of the three special methods <code>__get__(self, instance, owner)</code>, <code>__set__(self, instance, value)</code>, <code>__delete__(self, instance)</code> can be used as a descriptor. Creating an instance of a descriptor as a class member of a second class makes the instance a property of the second class.<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;25&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Class_and_static_methods">Class and static methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=32" title="Edit section: Class and static methods">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Python allows the creation of class methods and static methods via the use of the <code>@classmethod</code>  and <code>@staticmethod</code> <a href="#Decorators">decorators</a>.  The first argument to a class method is the class object instead of the self-reference to the instance.  A static method has no special first argument.  Neither the instance, nor the class object is passed to a static method.
+</p>
+<h2><span class="mw-headline" id="Exceptions">Exceptions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=33" title="Edit section: Exceptions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Python supports (and extensively uses) <a href="/wiki/Exception_handling" title="Exception handling">exception handling</a> as a means of testing for error conditions and other "exceptional" events in a program. Indeed, it is even possible to trap the exception caused by a <a href="/wiki/Syntax_error" title="Syntax error">syntax error</a>.
+</p><p>Python style calls for the use of exceptions whenever an error condition might arise. Rather than testing for access to a file or resource before actually using it, it is conventional in Python to just go ahead and try to use it, catching the exception if access is rejected.
+</p><p>Exceptions can also be used as a more general means of non-local transfer of control, even when an error is not at issue. For instance, the <a href="/wiki/GNU_Mailman" title="GNU Mailman">Mailman</a> mailing list software, written in Python, uses exceptions to jump out of deeply nested message-handling logic when a decision has been made to reject a message or hold it for moderator approval.
+</p><p>Exceptions are often used as an alternative to the <code>if</code>-block, especially in <a href="/wiki/Thread_(computer_science)" class="mw-redirect" title="Thread (computer science)">threaded</a> situations. A commonly invoked motto is EAFP, or "It is Easier to Ask for Forgiveness than Permission,"<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;26&#93;</a></sup> which is attributed to <a href="/wiki/Grace_Hopper#Anecdotes" title="Grace Hopper">Grace Hopper</a>.<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;27&#93;</a></sup><sup id="cite_ref-nutshell_32-0" class="reference"><a href="#cite_note-nutshell-32">&#91;28&#93;</a></sup> The alternative, known as LBYL, or "Look Before You Leap", explicitly tests for pre-conditions.<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;29&#93;</a></sup>
+</p><p>In this first code sample, following the LBYL approach, there is an explicit check for the attribute before access:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">spam</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">):</span>
+    <span class="n">ham</span> <span class="o">=</span> <span class="n">spam</span><span class="o">.</span><span class="n">eggs</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">handle_missing_attr</span><span class="p">()</span>
+</pre></div>
+<p>This second sample follows the EAFP paradigm:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">ham</span> <span class="o">=</span> <span class="n">spam</span><span class="o">.</span><span class="n">eggs</span>
+<span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+    <span class="n">handle_missing_attr</span><span class="p">()</span>
+</pre></div>
+<p>These two code samples have the same effect, although there will be performance differences.  When <code>spam</code> has the attribute <code>eggs</code>, the EAFP sample will run faster.  When <code>spam</code> does not have the attribute <code>eggs</code> (the "exceptional" case), the EAFP sample will run slower. The Python <a rel="nofollow" class="external text" href="https://docs.python.org/library/profile.html">profiler</a> can be used in specific cases to determine performance characteristics. If exceptional cases are rare, then the EAFP version will have superior <a href="/wiki/Average_performance" class="mw-redirect" title="Average performance">average performance</a> than the alternative. In addition, it avoids the whole class of <a href="/wiki/Time-of-check-to-time-of-use" class="mw-redirect" title="Time-of-check-to-time-of-use">time-of-check-to-time-of-use</a> (TOCTTOU) vulnerabilities, other <a href="/wiki/Race_conditions" class="mw-redirect" title="Race conditions">race conditions</a>,<sup id="cite_ref-nutshell_32-1" class="reference"><a href="#cite_note-nutshell-32">&#91;28&#93;</a></sup><sup id="cite_ref-34" class="reference"><a href="#cite_note-34">&#91;30&#93;</a></sup> and is compatible with <a href="/wiki/Duck_typing" title="Duck typing">duck typing</a>. A drawback of EAFP is that it can be used only with statements; an exception cannot be caught in a generator expression, list comprehension, or lambda function.
+</p>
+<h2><span class="mw-headline" id="Comments_and_docstrings">Comments and docstrings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=34" title="Edit section: Comments and docstrings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Python has two ways to annotate Python code. One is by using comments to indicate what some part of the code does. Single-line comments begin with the hash character (<code>#</code>) and continue until the end of the line. Comments spanning more than one line are achieved by inserting a multi-line string (with <code>"""</code> or <code>'''</code> as the delimiter on each end) that is not used in assignment or otherwise evaluated, but sits in between other statements.
+</p><p>Commenting a piece of code:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">getline</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>  <span class="c1"># Get one line and return it</span>
+</pre></div>
+<p>Commenting a piece of code with multiple lines:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">getline</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>    <span class="s2">&quot;&quot;&quot;this function</span>
+<span class="s2">                                      gets one line</span>
+<span class="s2">                                      and returns it&quot;&quot;&quot;</span>
+</pre></div>
+<p><a href="/wiki/Docstring" title="Docstring">Docstrings</a> (documentation strings), that is, strings that are located alone without assignment as the first indented line within a module, class, method or function, automatically set their contents as an attribute named <code>__doc__</code>, which is intended to store a human-readable description of the object's purpose, behavior, and usage. The built-in <code>help</code> function generates its output based on <code>__doc__</code> attributes. Such strings can be delimited with <code>"</code> or <code>'</code> for single line strings, or may span multiple lines if delimited with either <code>"""</code> or <code>'''</code> which is Python's notation for specifying multi-line strings. However, the style guide for the language specifies that triple double quotes (<code>"""</code>) are preferred for both single and multi-line docstrings.<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">&#91;31&#93;</a></sup>
+</p><p>Single line docstring:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">getline</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Get one line from stdin and return it.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+<p>Multi-line docstring:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">getline</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Get one line</span>
+<span class="sd">       from stdin</span>
+<span class="sd">       and return it.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+<p>Docstrings can be as large as the programmer wants and contain <a href="/wiki/Newline" title="Newline">line breaks</a>. In contrast with comments, docstrings are themselves Python objects and are part of the interpreted code that Python runs. That means that a running program can retrieve its own docstrings and manipulate that information, but the normal usage is to give other programmers information about how to invoke the object being documented in the docstring.
+</p><p>There are tools available that can extract the docstrings from Python code and generate documentation. Docstring documentation can also be accessed from the interpreter with the <code>help()</code> function, or from the shell with the <a href="/wiki/Pydoc" title="Pydoc">pydoc</a> command <code>pydoc</code>.
+</p><p>The <a href="/wiki/Doctest" title="Doctest">doctest</a> standard module uses interactions copied from Python shell sessions into docstrings to create tests, whereas the <a rel="nofollow" class="external text" href="http://docopt.org">docopt</a> module uses them to define command-line options.
+</p>
+<h2><span class="mw-headline" id="Function_annotations">Function annotations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=35" title="Edit section: Function annotations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Function annotations (type hints) are defined in PEP 3107.<sup id="cite_ref-pep3107_36-0" class="reference"><a href="#cite_note-pep3107-36">&#91;32&#93;</a></sup> They allow attaching data to the arguments and return of a function. The behaviour of annotations is not defined by the language, and is left to third party frameworks. For example, a library could be written to handle static typing:<sup id="cite_ref-pep3107_36-1" class="reference"><a href="#cite_note-pep3107-36">&#91;32&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">haul</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">Haulable</span><span class="p">,</span> <span class="o">*</span><span class="n">vargs</span><span class="p">:</span> <span class="n">PackAnimal</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Distance</span>
+</pre></div>
+<h2><span class="mw-headline" id="Decorators">Decorators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=36" title="Edit section: Decorators">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1033289096"/><div role="note" class="hatnote navigation-not-searchable">See also: <a href="/wiki/Advice_(computer_science)" class="mw-redirect" title="Advice (computer science)">Advice (computer science)</a></div>
+<p>A decorator is any callable Python object that is used to modify a function, method or class definition.  A decorator is passed the original object being defined and returns a modified object, which is then bound to the name in the definition.  Python decorators were inspired in part by <a href="/wiki/Java_annotation" title="Java annotation">Java annotations</a>, and have a similar syntax; the decorator syntax is pure <a href="/wiki/Syntactic_sugar" title="Syntactic sugar">syntactic sugar</a>, using <code>@</code> as the keyword:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="nd">@viking_chorus</span>
+<span class="k">def</span> <span class="nf">menu_item</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;spam&quot;</span><span class="p">)</span>
+</pre></div>
+<p>is equivalent to
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">menu_item</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;spam&quot;</span><span class="p">)</span>
+<span class="n">menu_item</span> <span class="o">=</span> <span class="n">viking_chorus</span><span class="p">(</span><span class="n">menu_item</span><span class="p">)</span>
+</pre></div>
+<p>Decorators are a form of <a href="/wiki/Metaprogramming" title="Metaprogramming">metaprogramming</a>; they enhance the action of the function or method they decorate. For example, in the sample below, <code>viking_chorus</code> might cause <code>menu_item</code> to be run 8 times (see <a href="/wiki/Spam_(Monty_Python)" title="Spam (Monty Python)">Spam sketch</a>) for each time it is called:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">viking_chorus</span><span class="p">(</span><span class="n">myfunc</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">inner_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+            <span class="n">myfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">inner_func</span>
+</pre></div>
+<p>Canonical uses of function decorators are for creating <a href="/wiki/Class_method" class="mw-redirect" title="Class method">class methods</a> or <a href="/wiki/Static_method" class="mw-redirect" title="Static method">static methods</a>, adding function attributes, <a href="/wiki/Tracing_(software)" title="Tracing (software)">tracing</a>, setting <a href="/wiki/Precondition" title="Precondition">pre-</a> and <a href="/wiki/Postcondition" title="Postcondition">postconditions</a>, and <a href="/wiki/Synchronization" title="Synchronization">synchronization</a>,<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">&#91;33&#93;</a></sup> but can be used for far more, including <a href="/wiki/Tail_recursion_elimination" class="mw-redirect" title="Tail recursion elimination">tail recursion elimination</a>,<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">&#91;34&#93;</a></sup> <a href="/wiki/Memoization" title="Memoization">memoization</a> and even improving the writing of other decorators.<sup id="cite_ref-39" class="reference"><a href="#cite_note-39">&#91;35&#93;</a></sup>
+</p><p>Decorators can be chained by placing several on adjacent lines:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="nd">@invincible</span>
+<span class="nd">@favourite_colour</span><span class="p">(</span><span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">black_knight</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+<p>is equivalent to
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">black_knight</span><span class="p">():</span>
+    <span class="k">pass</span>
+<span class="n">black_knight</span> <span class="o">=</span> <span class="n">invincible</span><span class="p">(</span><span class="n">favourite_colour</span><span class="p">(</span><span class="s2">&quot;Blue&quot;</span><span class="p">)(</span><span class="n">black_knight</span><span class="p">))</span>
+</pre></div>
+<p>or, using intermediate variables
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">black_knight</span><span class="p">():</span>
+    <span class="k">pass</span>
+<span class="n">blue_decorator</span> <span class="o">=</span> <span class="n">favourite_colour</span><span class="p">(</span><span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
+<span class="n">decorated_by_blue</span> <span class="o">=</span> <span class="n">blue_decorator</span><span class="p">(</span><span class="n">black_knight</span><span class="p">)</span>
+<span class="n">black_knight</span> <span class="o">=</span> <span class="n">invincible</span><span class="p">(</span><span class="n">decorated_by_blue</span><span class="p">)</span>
+</pre></div>
+<p>In the example above, the <code>favourite_colour</code> decorator <a href="/wiki/Factory_(software_concept)" class="mw-redirect" title="Factory (software concept)">factory</a> takes an argument. Decorator factories must return a decorator, which is then called with the object to be decorated as its argument:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">favourite_colour</span><span class="p">(</span><span class="n">colour</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">colour</span><span class="p">)</span>
+            <span class="n">func</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">wrapper</span>
+    <span class="k">return</span> <span class="n">decorator</span>
+</pre></div>
+<p>This would then decorate the <code>black_knight</code> function such that the colour, <code>"Blue"</code>, would be printed prior to the <code>black_knight</code> function running. <a href="/wiki/Closure_(computer_programming)" title="Closure (computer programming)">Closure</a> ensures that the colour argument is accessible to the innermost wrapper function even when it is returned and goes out of scope, which is what allows decorators to work.
+</p><p>Despite the name, Python decorators are not an implementation of the <a href="/wiki/Decorator_pattern" title="Decorator pattern">decorator pattern</a>. The decorator pattern is a <a href="/wiki/Design_pattern" title="Design pattern">design pattern</a> used in <a href="/wiki/Statically_typed" class="mw-redirect" title="Statically typed">statically typed</a> <a href="/wiki/Object-oriented_programming_language" class="mw-redirect" title="Object-oriented programming language">object-oriented programming languages</a> to allow functionality to be added to objects at run time; Python decorators add functionality to functions and methods at definition time, and thus are a higher-level construct than decorator-pattern classes. The decorator pattern itself is trivially implementable in Python, because the language is <a href="/wiki/Duck_typed" class="mw-redirect" title="Duck typed">duck typed</a>, and so is not usually considered as such.<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (April 2015)">clarification needed</span></a></i>&#93;</sup>
+</p>
+<h2><span class="mw-headline" id="Easter_eggs">Easter eggs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=37" title="Edit section: Easter eggs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Users of <a href="/wiki/Curly_bracket_programming_language" class="mw-redirect" title="Curly bracket programming language">curly bracket languages</a>, such as <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> or <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, sometimes expect or wish Python to follow a block-delimiter convention. Brace-delimited block syntax has been repeatedly requested, and consistently rejected by core developers. The Python interpreter contains an <a href="/wiki/Easter_egg_(virtual)" class="mw-redirect" title="Easter egg (virtual)">easter egg</a> that summarizes its developers' feelings on this issue. The code <code>from __future__ import braces</code> raises the exception <code>SyntaxError: not a chance</code>. The <code>__future__</code> module is normally used to <a href="/wiki/Backporting" title="Backporting">provide features from future versions</a> of Python.
+</p><p>Another hidden message, the <a href="/wiki/Zen_of_Python" title="Zen of Python">Zen of Python</a> (a summary of <a href="/wiki/Python_(programming_language)#Design_philosophy_and_features" title="Python (programming language)">Python design philosophy</a>), is displayed when trying to <code>import this</code>.
+</p><p>The message <code>Hello world!</code> is printed when the import statement <code>import __hello__</code> is used. In Python 2.7, instead of <code>Hello world!</code> it prints <code>Hello world...</code>.
+</p><p>Importing the <code>antigravity</code> module opens a web browser to <a href="/wiki/Xkcd" title="Xkcd">xkcd</a> comic <a rel="nofollow" class="external text" href="https://xkcd.com/353/">353</a> that portrays a humorous fictional use for such a module, intended to demonstrate the ease with which Python modules enable additional functionality.<sup id="cite_ref-40" class="reference"><a href="#cite_note-40">&#91;36&#93;</a></sup> In Python 3, this module also contains an implementation of the "geohash" algorithm, a reference to <a href="/wiki/Xkcd" title="Xkcd">xkcd</a> comic <a rel="nofollow" class="external text" href="https://xkcd.com/426/">426</a>.<sup id="cite_ref-41" class="reference"><a href="#cite_note-41">&#91;37&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=38" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1011085734"/><div class="reflist reflist-columns references-column-width" style="column-width: 30em;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">"Readability counts." - <a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-0020/">PEP 20 - The Zen of Python</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20141205214430/https://www.python.org/dev/peps/pep-0020/">Archived</a> 2014-12-05 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a></span>
+</li>
+<li id="cite_note-PEP20-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-PEP20_2-0">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-0020/">"PEP 20 - The Zen of Python"</a>. Python Software Foundation. 2004-08-23. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20081203193726/http://www.python.org./dev/peps/pep-0020/">Archived</a> from the original on 2008-12-03<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-11-24</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=PEP+20+-+The+Zen+of+Python&amp;rft.pub=Python+Software+Foundation&amp;rft.date=2004-08-23&amp;rft_id=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-0020%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">"2. Lexical analysis"</a>. <i>Python 3 documentation</i>. Python Software Foundation<span class="reference-accessdate">. Retrieved <span class="nowrap">2021-03-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Python+3+documentation&amp;rft.atitle=2.+Lexical+analysis&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F3%2Freference%2Flexical_analysis.html%23keywords&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span><span class="cs1-maint citation-comment"><code class="cs1-code">{{<a href="/wiki/Template:Cite_web" title="Template:Cite web">cite web</a>}}</code>:  CS1 maint: url-status (<a href="/wiki/Category:CS1_maint:_url-status" title="Category:CS1 maint: url-status">link</a>)</span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/2/reference/lexical_analysis.html#keywords">"2. Lexical analysis"</a>. <i>Python v2.7.18 documentation</i>. Python Software Foundation<span class="reference-accessdate">. Retrieved <span class="nowrap">2021-03-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Python+v2.7.18+documentation&amp;rft.atitle=2.+Lexical+analysis&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F2%2Freference%2Flexical_analysis.html%23keywords&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span><span class="cs1-maint citation-comment"><code class="cs1-code">{{<a href="/wiki/Template:Cite_web" title="Template:Cite web">cite web</a>}}</code>:  CS1 maint: url-status (<a href="/wiki/Category:CS1_maint:_url-status" title="Category:CS1 maint: url-status">link</a>)</span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/3/whatsnew/3.5.html#new-keywords">"New Keywords"</a>. <i>Python v3.5 documentation</i>. Docs.python.org. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160618215313/https://docs.python.org/3//whatsnew/3.5.html#new-keywords">Archived</a> from the original on 2016-06-18<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-06-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Python+v3.5+documentation&amp;rft.atitle=New+Keywords&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F3%2Fwhatsnew%2F3.5.html%23new-keywords&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/3/reference/lexical_analysis.html#soft-keywords">"2. Lexical analysis"</a>. <i>Python 3 documentation</i>. Python Software Foundation<span class="reference-accessdate">. Retrieved <span class="nowrap">2022-01-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Python+3+documentation&amp;rft.atitle=2.+Lexical+analysis&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F3%2Freference%2Flexical_analysis.html%23soft-keywords&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span><span class="cs1-maint citation-comment"><code class="cs1-code">{{<a href="/wiki/Template:Cite_web" title="Template:Cite web">cite web</a>}}</code>:  CS1 maint: url-status (<a href="/wiki/Category:CS1_maint:_url-status" title="Category:CS1 maint: url-status">link</a>)</span></span>
+</li>
+<li id="cite_note-pep-0622-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-pep-0622_10-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-0622/#backwards-compatibility">"PEP 622 -- Structural Pattern Matching"</a>. 2020-06-23<span class="reference-accessdate">. Retrieved <span class="nowrap">2022-01-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=PEP+622+--+Structural+Pattern+Matching&amp;rft.date=2020-06-23&amp;rft_id=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-0622%2F%23backwards-compatibility&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-0008/">"PEP 8 -- Style Guide for Python Code"</a>. <i>Python.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2021-03-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Python.org&amp;rft.atitle=PEP+8+--+Style+Guide+for+Python+Code&amp;rft_id=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-0008%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFHoffa2017" class="citation web cs1">Hoffa, Felipe (2017-07-26). <a rel="nofollow" class="external text" href="https://hoffa.medium.com/400-000-github-repositories-1-billion-files-14-terabytes-of-code-spaces-or-tabs-7cfe0b5dd7fd">"400,000 GitHub repositories, 1 billion files, 14 terabytes of code: Spaces or Tabs?"</a>. <i>Medium</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2021-03-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Medium&amp;rft.atitle=400%2C000+GitHub+repositories%2C+1+billion+files%2C+14+terabytes+of+code%3A+Spaces+or+Tabs%3F&amp;rft.date=2017-07-26&amp;rft.aulast=Hoffa&amp;rft.aufirst=Felipe&amp;rft_id=https%3A%2F%2Fhoffa.medium.com%2F400-000-github-repositories-1-billion-files-14-terabytes-of-code-spaces-or-tabs-7cfe0b5dd7fd&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://ukupat.github.io/tabs-or-spaces/">"Tabs or Spaces"</a>. <i>ukupat.github.io</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2021-03-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ukupat.github.io&amp;rft.atitle=Tabs+or+Spaces&amp;rft_id=https%3A%2F%2Fukupat.github.io%2Ftabs-or-spaces%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-0008/">"PEP 8 -- Style Guide for Python Code"</a>. <i>Python.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2021-03-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Python.org&amp;rft.atitle=PEP+8+--+Style+Guide+for+Python+Code&amp;rft_id=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-0008%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep498">"PEP 498 - Literal String Interpolation"</a>. <i>What’s New In Python 3.6</i>. 2016-12-23. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20170330002530/https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-pep498">Archived</a> from the original on 2017-03-30<span class="reference-accessdate">. Retrieved <span class="nowrap">2017-03-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=What%E2%80%99s+New+In+Python+3.6&amp;rft.atitle=PEP+498+-+Literal+String+Interpolation&amp;rft.date=2016-12-23&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F3%2Fwhatsnew%2F3.6.html%23whatsnew36-pep498&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/reference/lexical_analysis.html#string-literals">"2. Lexical analysis"</a>. <i>Python v2.7.5 documentation</i>. Docs.python.org. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20121023010739/http://docs.python.org/reference/lexical_analysis.html#string-literals">Archived</a> from the original on 2012-10-23<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-08-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Python+v2.7.5+documentation&amp;rft.atitle=2.+Lexical+analysis&amp;rft_id=https%3A%2F%2Fdocs.python.org%2Freference%2Flexical_analysis.html%23string-literals&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/reference/lexical_analysis.html#string-literal-concatenation">"2. Lexical analysis"</a>. <i>Python v2.7.5 documentation</i>. Docs.python.org. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20121023010739/http://docs.python.org/reference/lexical_analysis.html#string-literal-concatenation">Archived</a> from the original on 2012-10-23<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-08-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Python+v2.7.5+documentation&amp;rft.atitle=2.+Lexical+analysis&amp;rft_id=https%3A%2F%2Fdocs.python.org%2Freference%2Flexical_analysis.html%23string-literal-concatenation&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text">Hashable items are usually immutable, but not necessarily so by definition. See <a rel="nofollow" class="external text" href="https://docs.python.org/3/glossary.html?highlight=hashable">python.org/3/glossary.htm</a></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/3/reference/expressions.html#comparisons">"6. Expressions — Python 3.9.2 documentation"</a>. <i>docs.python.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2021-03-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=docs.python.org&amp;rft.atitle=6.+Expressions+%E2%80%94+Python+3.9.2+documentation&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F3%2Freference%2Fexpressions.html%23comparisons&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.python.org/download/releases/2.7/">"Archived copy"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160127021350/https://www.python.org/download/releases/2.7/">Archived</a> from the original on 2016-01-27<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-01-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Archived+copy&amp;rft_id=https%3A%2F%2Fwww.python.org%2Fdownload%2Freleases%2F2.7%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span><span class="cs1-maint citation-comment"><code class="cs1-code">{{<a href="/wiki/Template:Cite_web" title="Template:Cite web">cite web</a>}}</code>:  CS1 maint: archived copy as title (<a href="/wiki/Category:CS1_maint:_archived_copy_as_title" title="Category:CS1 maint: archived copy as title">link</a>)</span></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/2/tutorial/datastructures.html#sets">"Archived copy"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160126161121/https://docs.python.org/2/tutorial/datastructures.html#sets">Archived</a> from the original on 2016-01-26<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-01-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Archived+copy&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F2%2Ftutorial%2Fdatastructures.html%23sets&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span><span class="cs1-maint citation-comment"><code class="cs1-code">{{<a href="/wiki/Template:Cite_web" title="Template:Cite web">cite web</a>}}</code>:  CS1 maint: archived copy as title (<a href="/wiki/Category:CS1_maint:_archived_copy_as_title" title="Category:CS1 maint: archived copy as title">link</a>)</span></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/2/tutorial/datastructures.html#dictionaries">"Archived copy"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160126161121/https://docs.python.org/2/tutorial/datastructures.html#dictionaries">Archived</a> from the original on 2016-01-26<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-01-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Archived+copy&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F2%2Ftutorial%2Fdatastructures.html%23dictionaries&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span><span class="cs1-maint citation-comment"><code class="cs1-code">{{<a href="/wiki/Template:Cite_web" title="Template:Cite web">cite web</a>}}</code>:  CS1 maint: archived copy as title (<a href="/wiki/Category:CS1_maint:_archived_copy_as_title" title="Category:CS1 maint: archived copy as title">link</a>)</span></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFDavid_Mertz" class="citation web cs1">David Mertz. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070220181222/http://gnosis.cx/publish/programming/charming_python_13.html">"Functional Programming in Python"</a>. IBM developerWorks. Archived from <a rel="nofollow" class="external text" href="http://gnosis.cx/publish/programming/charming_python_13.html">the original</a> on 2007-02-20<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-08-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Functional+Programming+in+Python&amp;rft.pub=IBM+developerWorks&amp;rft.au=David+Mertz&amp;rft_id=http%3A%2F%2Fgnosis.cx%2Fpublish%2Fprogramming%2Fcharming_python_13.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-0308/">"PEP 308 -- Conditional Expressions"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160313113147/https://www.python.org/dev/peps/pep-0308/">Archived</a> from the original on 2016-03-13<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-04-14</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=PEP+308+--+Conditional+Expressions&amp;rft_id=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-0308%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text">The <code>nonlocal</code> keyword was adopted by <a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-3104/">PEP 3104</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20141202225741/https://www.python.org/dev/peps/pep-3104">Archived</a> 2014-12-02 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a></span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://docs.python-guide.org/en/latest/writing/style/#we-are-all-responsible-users">"Python Style Guide"</a>. docs.python-guide.org. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20150309074305/http://docs.python-guide.org/en/latest/writing/style/#we-are-all-responsible-users">Archived</a> from the original on 2015-03-09<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-03-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Python+Style+Guide&amp;rft.pub=docs.python-guide.org&amp;rft_id=http%3A%2F%2Fdocs.python-guide.org%2Fen%2Flatest%2Fwriting%2Fstyle%2F%23we-are-all-responsible-users&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-0343/">"PEP 343 -- The "with" Statement"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20141214110002/https://www.python.org/dev/peps/pep-0343/">Archived</a> from the original on 2014-12-14<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-08-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=PEP+343+--+The+%22with%22+Statement&amp;rft_id=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-0343%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://docs.python.org/3/glossary.html#term-descriptor">"Glossary — Python 3.9.2 documentation"</a>. <i>docs.python.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2021-03-23</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=docs.python.org&amp;rft.atitle=Glossary+%E2%80%94+Python+3.9.2+documentation&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F3%2Fglossary.html%23term-descriptor&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://docs.python.org/glossary.html#term-eafp">EAFP</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20121026064048/http://docs.python.org/glossary.html#term-eafp">Archived</a> 2012-10-26 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>, Python Glossary</span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFHamblen" class="citation web cs1">Hamblen, Diane. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20090114165606/http://www.chips.navy.mil/archives/86_jul/interview.html">"Only the Limits of Our Imagination: An exclusive interview with RADM Grace M. Hopper"</a>. Department of the Navy Information Technology Magazine. Archived from <a rel="nofollow" class="external text" href="http://www.chips.navy.mil/archives/86_jul/interview.html">the original</a> on January 14, 2009<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-01-31</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Only+the+Limits+of+Our+Imagination%3A+An+exclusive+interview+with+RADM+Grace+M.+Hopper&amp;rft.pub=Department+of+the+Navy+Information+Technology+Magazine&amp;rft.aulast=Hamblen&amp;rft.aufirst=Diane&amp;rft_id=http%3A%2F%2Fwww.chips.navy.mil%2Farchives%2F86_jul%2Finterview.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-nutshell-32"><span class="mw-cite-backlink">^ <a href="#cite_ref-nutshell_32-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-nutshell_32-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><i>Python in a nutshell,</i> <a href="/wiki/Alex_Martelli" title="Alex Martelli">Alex Martelli</a>, <a rel="nofollow" class="external text" href="https://books.google.com/books?id=JnR9hQA3SncC&amp;pg=PA134">p. 134</a></span>
+</li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://docs.python.org/3/glossary.html#term-lbyl">LBYL</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20180121071609/https://docs.python.org/3/glossary.html#term-lbyl">Archived</a> 2018-01-21 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>, Python Glossary</span>
+</li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFAlex_Martelli2003" class="citation web cs1"><a href="/wiki/Alex_Martelli" title="Alex Martelli">Alex Martelli</a> (19 May 2003). <a rel="nofollow" class="external text" href="http://code.activestate.com/lists/python-list/337643/">"EAFP v. LBYL"</a>. python-list mailing list. <a rel="nofollow" class="external text" href="https://archive.today/20120714062801/http://code.activestate.com/lists/python-list/337643/">Archived</a> from the original on 14 July 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">18 July</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=EAFP+v.+LBYL&amp;rft.pub=python-list+mailing+list&amp;rft.date=2003-05-19&amp;rft.au=Alex+Martelli&amp;rft_id=http%3A%2F%2Fcode.activestate.com%2Flists%2Fpython-list%2F337643%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-0008/">"PEP 8 -- Style Guide for Python Code"</a>. <i>Python.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2021-03-23</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Python.org&amp;rft.atitle=PEP+8+--+Style+Guide+for+Python+Code&amp;rft_id=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-0008%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-pep3107-36"><span class="mw-cite-backlink">^ <a href="#cite_ref-pep3107_36-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-pep3107_36-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.python.org/dev/peps/pep-3107/">"PEP 3107 -- Function Annotations"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20150106050429/https://www.python.org/dev/peps/pep-3107/">Archived</a> from the original on 2015-01-06<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-08-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=PEP+3107+--+Function+Annotations&amp;rft_id=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-3107%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.ddj.com/184406073#l11">"Python 2.4 Decorators: Reducing code duplication and consolidating knowledge"</a>. <i>Dr. Dobb's</i>. 2005-05-01. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070206063944/http://www.ddj.com/184406073#l11">Archived</a> from the original on 2007-02-06<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-02-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Dr.+Dobb%27s&amp;rft.atitle=Python+2.4+Decorators%3A+Reducing+code+duplication+and+consolidating+knowledge&amp;rft.date=2005-05-01&amp;rft_id=http%3A%2F%2Fwww.ddj.com%2F184406073%23l11&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/496691">"New Tail Recursion Decorator"</a>. <i>ASPN: Python Cookbook</i>. 2006-11-14. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070209010200/http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/496691">Archived</a> from the original on 2007-02-09<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-02-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ASPN%3A+Python+Cookbook&amp;rft.atitle=New+Tail+Recursion+Decorator&amp;rft.date=2006-11-14&amp;rft_id=http%3A%2F%2Faspn.activestate.com%2FASPN%2FCookbook%2FPython%2FRecipe%2F496691&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-39"><span class="mw-cite-backlink"><b><a href="#cite_ref-39">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.phyast.pitt.edu/~micheles/python/documentation.html">"The decorator module"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070210000956/http://www.phyast.pitt.edu/%7Emicheles/python/documentation.html">Archived</a> from the original on 2007-02-10<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-02-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+decorator+module&amp;rft_id=http%3A%2F%2Fwww.phyast.pitt.edu%2F~micheles%2Fpython%2Fdocumentation.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation cs2"><a rel="nofollow" class="external text" href="https://github.com/python/cpython"><i>cpython: The Python programming language</i></a>, Python, 2017-10-15, <a rel="nofollow" class="external text" href="https://web.archive.org/web/20170915183846/https://github.com/python/cpython">archived</a> from the original on 2017-09-15<span class="reference-accessdate">, retrieved <span class="nowrap">2017-10-15</span></span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=cpython%3A+The+Python+programming+language&amp;rft.pub=Python&amp;rft.date=2017-10-15&amp;rft_id=https%3A%2F%2Fgithub.com%2Fpython%2Fcpython&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><b><a href="#cite_ref-41">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://github.com/python/cpython/commit/b1614a7b6705f939b29df4045e591fcf53a8611b">"Another hidden treasure. · python/cpython@b1614a7"</a>. <i>GitHub</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-10-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=GitHub&amp;rft.atitle=Another+hidden+treasure.+%C2%B7+python%2Fcpython%40b1614a7&amp;rft_id=https%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fcommit%2Fb1614a7b6705f939b29df4045e591fcf53a8611b&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APython+syntax+and+semantics" class="Z3988"></span></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit&amp;section=39" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://docs.python.org/3/tutorial/">Python tutorial</a> written by the author of Python, Guido van Rossum.</li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1384
+Cached time: 20220520041324
+Cache expiry: 1814400
+Reduced expiry: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.781 seconds
+Real time usage: 0.920 seconds
+Preprocessor visited node count: 3217/1000000
+Post‐expand include size: 70447/2097152 bytes
+Template argument size: 4220/2097152 bytes
+Highest expansion depth: 12/100
+Expensive parser function count: 9/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 141644/5000000 bytes
+Lua time usage: 0.343/10.000 seconds
+Lua memory usage: 8197985/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  762.339      1 -total
+ 47.92%  365.343      2 Template:Reflist
+ 35.53%  270.825     30 Template:Cite_web
+ 13.84%  105.538      1 Template:Short_description
+  7.55%   57.519      1 Template:Pagetype
+  5.62%   42.835      2 Template:Clarify
+  5.15%   39.260      1 Template:Lead_too_short
+  4.99%   38.047      2 Template:Fix-span
+  4.80%   36.602      2 Template:Ambox
+  4.48%   34.173      1 Template:Blockquote
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:5250192-0!canonical and timestamp 20220520041323 and revision id 1082284544. Serialized with JSON.
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Python_syntax_and_semantics&amp;oldid=1082284544">https://en.wikipedia.org/w/index.php?title=Python_syntax_and_semantics&amp;oldid=1082284544</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Programming_language_syntax" title="Category:Programming language syntax">Programming language syntax</a></li><li><a href="/wiki/Category:Python_(programming_language)" title="Category:Python (programming language)">Python (programming language)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:CS1_maint:_url-status" title="Category:CS1 maint: url-status">CS1 maint: url-status</a></li><li><a href="/wiki/Category:CS1_maint:_archived_copy_as_title" title="Category:CS1 maint: archived copy as title">CS1 maint: archived copy as title</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">Short description is different from Wikidata</a></li><li><a href="/wiki/Category:Wikipedia_introduction_cleanup_from_January_2021" title="Category:Wikipedia introduction cleanup from January 2021">Wikipedia introduction cleanup from January 2021</a></li><li><a href="/wiki/Category:All_pages_needing_cleanup" title="Category:All pages needing cleanup">All pages needing cleanup</a></li><li><a href="/wiki/Category:Articles_covered_by_WikiProject_Wikify_from_January_2021" title="Category:Articles covered by WikiProject Wikify from January 2021">Articles covered by WikiProject Wikify from January 2021</a></li><li><a href="/wiki/Category:All_articles_covered_by_WikiProject_Wikify" title="Category:All articles covered by WikiProject Wikify">All articles covered by WikiProject Wikify</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_style_issues_from_January_2021" title="Category:Wikipedia articles with style issues from January 2021">Wikipedia articles with style issues from January 2021</a></li><li><a href="/wiki/Category:All_articles_with_style_issues" title="Category:All articles with style issues">All articles with style issues</a></li><li><a href="/wiki/Category:All_articles_lacking_reliable_references" title="Category:All articles lacking reliable references">All articles lacking reliable references</a></li><li><a href="/wiki/Category:Articles_lacking_reliable_references_from_March_2021" title="Category:Articles lacking reliable references from March 2021">Articles lacking reliable references from March 2021</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_March_2021" title="Category:Wikipedia articles needing clarification from March 2021">Wikipedia articles needing clarification from March 2021</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_April_2015" title="Category:Wikipedia articles needing clarification from April 2015">Wikipedia articles needing clarification from April 2015</a></li><li><a href="/wiki/Category:Articles_with_example_Python_(programming_language)_code" title="Category:Articles with example Python (programming language) code">Articles with example Python (programming language) code</a></li><li><a href="/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation"  >
+	<label
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage" class="mw-list-item"><span title="The user page for the IP address you are editing as">Not logged in</span></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Python+syntax+and+semantics" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Python+syntax+and+semantics" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation"  >
+	<label
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/Python_syntax_and_semantics" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="mw-list-item"><a href="/wiki/Talk:Python_syntax_and_semantics" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	/>
+	<label
+		id="p-variants-label"
+		 aria-label="Change language variant"
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation"  >
+	<label
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="/wiki/Python_syntax_and_semantics"><span>Read</span></a></li><li id="ca-edit" class="mw-list-item"><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="mw-list-item"><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	/>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="/w/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search Wikipedia for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="/wiki/Main_Page"
+			title="Visit the main page"></a>
+	</div>
+	
+
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation"  >
+	<label
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" icon="home" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" icon="die" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation"  >
+	<label
+		id="p-interaction-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Contribute</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" icon="help" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" icon="recentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li></ul>
+		
+	</div>
+</nav>
+
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation"  >
+	<label
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Python_syntax_and_semantics" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Python_syntax_and_semantics" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Python_syntax_and_semantics&amp;oldid=1082284544" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Python_syntax_and_semantics&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Python_syntax_and_semantics&amp;id=1082284544&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6553861" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li></ul>
+		
+	</div>
+</nav>
+
+
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation"  >
+	<label
+		id="p-coll-print_export-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Print/export</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Python_syntax_and_semantics&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=Python_syntax_and_semantics&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li></ul>
+		
+	</div>
+</nav>
+
+
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation"  >
+	<label
+		id="p-wikibase-otherprojects-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">In other projects</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-wikibooks mw-list-item"><a href="https://en.wikibooks.org/wiki/Python_Programming/Basic_Syntax" hreflang="en"><span>Wikibooks</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation"  >
+	<label
+		id="p-lang-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Languages</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-es mw-list-item"><a href="https://es.wikipedia.org/wiki/Sintaxis_y_sem%C3%A1ntica_de_Python" title="Sintaxis y semántica de Python – Spanish" lang="es" hreflang="es" class="interlanguage-link-target"><span>Español</span></a></li><li class="interlanguage-link interwiki-fa mw-list-item"><a href="https://fa.wikipedia.org/wiki/%D9%82%D9%88%D8%A7%D8%B9%D8%AF_%D8%B2%D8%A8%D8%A7%D9%86_%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86" title="قواعد زبان پایتون – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target"><span>فارسی</span></a></li><li class="interlanguage-link interwiki-pt mw-list-item"><a href="https://pt.wikipedia.org/wiki/Sintaxe_e_sem%C3%A2ntica_de_Python" title="Sintaxe e semântica de Python – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target"><span>Português</span></a></li><li class="interlanguage-link interwiki-sr mw-list-item"><a href="https://sr.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B0_%D0%B8_%D1%81%D0%B5%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%B0_%D0%9F%D0%B0%D1%98%D1%82%D0%BE%D0%BD%D0%B0" title="Синтакса и семантика Пајтона – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target"><span>Српски / srpski</span></a></li><li class="interlanguage-link interwiki-zh mw-list-item"><a href="https://zh.wikipedia.org/wiki/Python%E8%AA%9E%E6%B3%95%E5%8F%8A%E8%AA%9E%E7%BE%A9" title="Python語法及語義 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target"><span>中文</span></a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6553861#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 12 April 2022, at 09:35<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License 3.0</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Python_syntax_and_semantics&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.781","walltime":"0.920","ppvisitednodes":{"value":3217,"limit":1000000},"postexpandincludesize":{"value":70447,"limit":2097152},"templateargumentsize":{"value":4220,"limit":2097152},"expansiondepth":{"value":12,"limit":100},"expensivefunctioncount":{"value":9,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":141644,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  762.339      1 -total"," 47.92%  365.343      2 Template:Reflist"," 35.53%  270.825     30 Template:Cite_web"," 13.84%  105.538      1 Template:Short_description","  7.55%   57.519      1 Template:Pagetype","  5.62%   42.835      2 Template:Clarify","  5.15%   39.260      1 Template:Lead_too_short","  4.99%   38.047      2 Template:Fix-span","  4.80%   36.602      2 Template:Ambox","  4.48%   34.173      1 Template:Blockquote"]},"scribunto":{"limitreport-timeusage":{"value":"0.343","limit":"10.000"},"limitreport-memusage":{"value":8197985,"limit":52428800}},"cachereport":{"origin":"mw1384","timestamp":"20220520041324","ttl":1814400,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Python syntax and semantics","url":"https:\/\/en.wikipedia.org\/wiki\/Python_syntax_and_semantics","sameAs":"http:\/\/www.wikidata.org\/entity\/Q6553861","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q6553861","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-05-22T21:08:25Z","dateModified":"2022-04-12T09:35:18Z","headline":"syntax of the Python programming language"}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Python syntax and semantics","url":"https:\/\/en.wikipedia.org\/wiki\/Python_syntax_and_semantics","sameAs":"http:\/\/www.wikidata.org\/entity\/Q6553861","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q6553861","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-05-22T21:08:25Z","dateModified":"2022-04-12T09:35:18Z","headline":"syntax of the Python programming language"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":172,"wgHostname":"mw1369"});});</script>
+</body>
+</html>
