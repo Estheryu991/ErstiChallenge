@@ -9,8 +9,9 @@
 
 def ischTeilsequenz(esthi, igor):
 	
-  b = len(esthi) # b stands for bubble
+ 	b = len(esthi) # b stands for bubble
 	t = len(igor) # t stands for tea 
+	
 
 	j = 0 # Index of esthi
 	s = 0 # Index of igor
