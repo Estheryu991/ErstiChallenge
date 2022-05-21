@@ -35,4 +35,4 @@ if __name__ == "__main__":
 	main()
 
 # by esthi
-# output>>> rogi rog roi ro rgi rg ri r ogi og oi o gi g i
+# output>>> i g o r ig io ir go gr or igo igr ior gor igor
